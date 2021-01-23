@@ -12,7 +12,7 @@ const EditInitialValues = ({
 }) => {
   useEffect(() => {
     getCurrentProfile()
-  }, [loading])
+  }, [getCurrentProfile, loading])
 
   const newProfileObj = {
     bio: loading || !profile.bio ? null : profile.bio,
