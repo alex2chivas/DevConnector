@@ -4,15 +4,33 @@ args.splice(0, 2)
 let str = args.join(' ')
 
 console.log(str)
-exec('git add .', cb)
-exec(`git commit -m "${str}"`, cb)
-exec(`git push`, cb)
+exec('git add .', cbAdd)
 
-function cb (err, sdout, sdin) {
+function cbAdd (err, sdout, sdin) {
   if (err) {
     console.log(err)
     return
   }
   // it worked
-  console.log('Git updated')
+  console.log('Git add completed')
+  exec(`git commit -m "${str}"`, cbCommit)
+}
+
+function cbCommit (err, sdout, sdin) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  // it worked
+  console.log('Git commit completed')
+  exec(`git push`, cbPush)
+}
+
+function cbPush (err, sdout, sdin) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  // it worked
+  console.log('Git push completed')
 }
