@@ -14,7 +14,7 @@ const PorfileTop = ({
     company,
     location,
     website,
-    social: { facebook, twitter, linkedin, youtube, instagram },
+    social,
     user: { name, avatar }
   }
 }) => {
@@ -27,7 +27,7 @@ const PorfileTop = ({
       </p>
       <p>{location && <span>{location}</span>}</p>
       <div className='icons my-1'>
-        {website && (
+        {social && website && (
           <a
             href={urlToRender(website)}
             target='_blank'
@@ -36,45 +36,45 @@ const PorfileTop = ({
             <i className='fas fa-globe fa-2x'></i>
           </a>
         )}
-        {twitter && (
+        {social && social.twitter && (
           <a
-            href={urlToRender(twitter)}
+            href={urlToRender(social.twitter)}
             target='_blank'
             rel='noopener noreferrer'
           >
             <i className='fab fa-twitter fa-2x'></i>
           </a>
         )}
-        {facebook && (
+        {social && social.facebook && (
           <a
-            href={urlToRender(facebook)}
+            href={urlToRender(social.facebook)}
             target='_blank'
             rel='noopener noreferrer'
           >
             <i className='fab fa-facebook fa-2x'></i>
           </a>
         )}
-        {linkedin && (
+        {social && social.linkedin && (
           <a
-            href={urlToRender(linkedin)}
+            href={urlToRender(social.linkedin)}
             target='_blank'
             rel='noopener noreferrer'
           >
             <i className='fab fa-linkedin fa-2x'></i>
           </a>
         )}
-        {youtube && (
+        {social && social.youtube && (
           <a
-            href={urlToRender(youtube)}
+            href={urlToRender(social.youtube)}
             target='_blank'
             rel='noopener noreferrer'
           >
             <i className='fab fa-youtube fa-2x'></i>
           </a>
         )}
-        {instagram && (
+        {social && social.instagram && (
           <a
-            href={urlToRender(instagram)}
+            href={urlToRender(social.instagram)}
             target='_blank'
             rel='noopener noreferrer'
           >

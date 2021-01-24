@@ -68,8 +68,8 @@ export const getProfileById = userId => async dispatch => {
     dispatch({
       type: PROFILE_ERROR,
       payload: {
-        msg: error.response.statusText,
-        status: error.response.status
+        msg: error.response && error.response.statusText,
+        status: error.response && error.response.status
       }
     })
   }
