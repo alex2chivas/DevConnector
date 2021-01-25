@@ -3,7 +3,6 @@ let args = process.argv
 args.splice(0, 2)
 let str = args.join(' ')
 
-console.log(str)
 exec('git add .', cbAdd)
 
 function cbAdd (err, sdout, sdin) {
