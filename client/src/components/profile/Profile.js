@@ -9,6 +9,7 @@ import ProfileTop from './PorfileTop'
 import ProfileAbout from './PorfileAbout'
 import ProfileExperience from './ProfileExperience'
 import ProfileEducation from './ProfileEducation'
+import ProfileGithub from './ProfileGithub'
 
 const Profile = ({
   getProfileById,
@@ -71,6 +72,10 @@ const Profile = ({
                 <h4> No Education credentials</h4>
               )}
             </div>
+
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
         </Fragment>
       )}
