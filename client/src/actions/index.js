@@ -13,6 +13,7 @@ import {
   getProfileById,
   getGithubRepos
 } from './profile'
+import { getPosts } from './post'
 
 export {
   // Alert
@@ -33,5 +34,7 @@ export {
   //Delete Profile
   deleteExperience,
   deleteEducation,
-  deleteAccount
+  deleteAccount,
+  // Posts
+  getPosts
 }

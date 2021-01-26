@@ -20,6 +20,7 @@ import AddExperience from './components/profile-forms/AddExperience'
 import AddEducation from './components/profile-forms/AddEducation'
 import Profiles from './components/profiles/Profiles'
 import Profile from './components/profile/Profile'
+import Posts from './components/posts/Post'
 
 import { persistConfig } from './configs/reduxPersist'
 import rootReducer from './reducers'
@@ -46,7 +47,7 @@ if (localStorage.token) {
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser())
-  }, [store])
+  }, [])
 
   return (
     <Provider store={store}>
@@ -82,6 +83,7 @@ const App = () => {
                 path='/add-education'
                 component={AddEducation}
               />
+              <PrivateRoute exact path='/posts' component={Posts} />
             </Switch>
             <Alert />
           </section>
