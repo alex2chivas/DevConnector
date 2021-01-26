@@ -18,9 +18,12 @@ const validate = values => {
 
   if (!values.fieldofstudy) {
     errors.fieldofstudy = 'Required'
-
-    return errors
   }
+
+  if (!values.text) {
+    errors.text = 'Required'
+  }
+  return errors
 }
 
 export default validate

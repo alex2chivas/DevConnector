@@ -71,7 +71,7 @@ router.post(
         {
           // DO
           // Change to 3600 which is 1 hour
-          expiresIn: 360000
+          expiresIn: 36000
         },
         (error, token) => {
           if (error) throw error

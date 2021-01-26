@@ -12,15 +12,15 @@ const EditInitialValues = ({
 }) => {
   useEffect(() => {
     getCurrentProfile()
-  }, [getCurrentProfile, loading])
+  }, [getCurrentProfile])
 
   const newProfileObj = {
-    bio: loading || !profile.bio ? null : profile.bio,
-    company: loading || !profile.company ? null : profile.company,
-    status: loading || !profile.status ? null : profile.status,
-    website: loading || !profile.website ? null : profile.website,
-    skills: loading || !profile.skills ? null : profile.skills.join(','),
-    location: loading || !profile.location ? null : profile.location,
+    bio: loading || !profile ? null : profile.bio,
+    company: loading || !profile ? null : profile.company,
+    status: loading || !profile ? null : profile.status,
+    website: loading || !profile ? null : profile.website,
+    skills: loading || !profile ? null : profile.skills.join(','),
+    location: loading || !profile ? null : profile.location,
     githubusername:
       loading || !profile.githubusername ? null : profile.githubusername,
     // Only way to make pick select Social since it is a nested object inside profile
