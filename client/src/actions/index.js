@@ -13,7 +13,14 @@ import {
   getProfileById,
   getGithubRepos
 } from './profile'
-import { getPosts, addLike, removeLike, deletePost, addPost } from './post'
+import {
+  getPosts,
+  addLike,
+  removeLike,
+  deletePost,
+  addPost,
+  getPost
+} from './post'
 
 export {
   // Alert
@@ -39,6 +46,7 @@ export {
   getPosts,
   addLike,
   addPost,
+  getPost,
   // Delete Posts / remove like
   removeLike,
   deletePost
