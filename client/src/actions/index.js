@@ -19,7 +19,9 @@ import {
   removeLike,
   deletePost,
   addPost,
-  getPost
+  getPost,
+  addComment,
+  deleteComment
 } from './post'
 
 export {
@@ -49,5 +51,8 @@ export {
   getPost,
   // Delete Posts / remove like
   removeLike,
-  deletePost
+  deletePost,
+  // comments
+  addComment,
+  deleteComment
 }
