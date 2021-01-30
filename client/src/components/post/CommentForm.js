@@ -4,13 +4,13 @@ import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 import { compose } from 'redux'
 
-import { addPost } from '../../actions'
-import { TextAreaComponent } from '../formFields/addPostAndCommentField.js'
+import { TextAreaComponent } from '../formFields/addPostAndCommentField'
+import { addComment } from '../../actions'
 import validate from '../formFields/fieldLevelValidation'
 
-const PostForm = ({ addPost, handleSubmit }) => {
-  const onSubmit = values => {
-    addPost(values)
+const CommentForm = ({ postId, addComment, handleSubmit }) => {
+  const onSubmit = value => {
+    addComment(postId, value)
   }
 
   return (
@@ -38,16 +38,16 @@ const PostForm = ({ addPost, handleSubmit }) => {
   )
 }
 
-PostForm.propTypes = {
-  addPost: PropTypes.func.isRequired
+CommentForm.propTypes = {
+  addComment: PropTypes.func.isRequired
 }
 
 export default compose(
   reduxForm({
-    form: 'PostForm',
+    form: 'CommentForm',
     destroyOnUnmount: true,
     enableReinitialize: true,
     validate
   }),
-  connect(null, { addPost })
-)(PostForm)
+  connect(null, { addComment })
+)(CommentForm)
