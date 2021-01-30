@@ -1,0 +1,7 @@
+{
+	"mongoURI": "mongodb+srv://devConnector:Frankier1993@cluster0.rsnaq.mongodb.net/Cluster0?retryWrites=true&w=majority ",
+	"jwtSecret": "43gvw34tvegwew",
+	"githubClientId": "55be3da94ad931ef4df0",
+	"githubSecret": "9be99f577f17f8a79343e5e56c2c9df84e067f35"
+}
+
